@@ -67,6 +67,10 @@ You can call the original functions by getting their pointers from
 ```hdll``` or more simply, casting the relevant pointer from the
 ```original_funcs``` array to the correct signature.
 
+Don't forget to call ```wait_init()``` at the beginning of every
+hook, this will wait for the ```original_funcs``` table to be
+initialized.
+
 You can also have stubgen use inline asm to have all the code in
 ```dllmain.c```. While this makes editing easier, this only works
 for 32-bit DLLs (because msvc doesn't have x64 inline asm) and
