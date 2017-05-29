@@ -55,6 +55,9 @@ stubgen /path/to/original.dll
 You can now edit ```dllmain.c``` and ```trampolines.asm``` to hook
 functions as you please.
 
+Run stubgen with no arguments to see a full documentation of all
+the available flags and parameters.
+
 Here is a full example of a project generated with stubgen that
 hook a couple OpenGL functions:
 https://github.com/Francesco149/stubgen/tree/master/example
