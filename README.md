@@ -6,8 +6,6 @@ https://www.codeproject.com/Articles/16541/Create-your-Proxy-DLLs-automatically
 (mainly the jump table method).
 
 # Installing (Linux)
-Compiling and installing:
-
 ```bash
 git clone https://github.com/Francesco149/stubgen.git
 cd stubgen
@@ -56,6 +54,10 @@ stubgen /path/to/original.dll
 ```
 You can now edit ```dllmain.c``` and ```trampolines.asm``` to hook
 functions as you please.
+
+Here is a full example of a project generated with stubgen that
+hook a couple OpenGL functions:
+https://github.com/Francesco149/stubgen/tree/master/example
 
 To hook a function, remove it from trampolines.asm and define it
 with the same name (if you change the name you will have to update
